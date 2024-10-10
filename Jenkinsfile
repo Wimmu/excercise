@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Define Docker Hub credentials ID
-        DOCKERHUB_CREDENTIALS_ID = 'wimmu'
+        DOCKERHUB_CREDENTIALS_ID = 'dockerhub'
         // Define Docker Hub repository name
         DOCKERHUB_REPO = 'wimmu/temperatureconverter_wilma'
         // Define Docker image tag
