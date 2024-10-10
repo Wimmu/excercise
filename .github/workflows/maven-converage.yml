@@ -1,6 +1,6 @@
 name: Java CI with Maven
 
-# Trigger the workflow on push or pull request events
+# Trigger the workflow on push or pull LLLrequest events
 on:
   push:
     branches:
