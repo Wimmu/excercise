@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>excercise</artifactId>
+    <artifactId>TempConverter_WilmaIsberg</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -26,11 +26,36 @@
 
     <build>
         <plugins>
-            <!-- JaCoCo plugin for code coverage -->
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>21</source>
+                    <target>21</target>
+                </configuration>
+            </plugin>
+
+            <!-- Maven JAR Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>TemperatureConverter</mainClass> <!-- Update with your main class -->
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <!-- JaCoCo Plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.8</version>
+                <version>0.8.12</version>
                 <executions>
                     <execution>
                         <goals>
@@ -39,7 +64,7 @@
                     </execution>
                     <execution>
                         <id>report</id>
-                        <phase>prepare-package</phase>
+                        <phase>test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -48,5 +73,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>

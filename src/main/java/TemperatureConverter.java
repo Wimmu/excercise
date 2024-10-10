@@ -34,4 +34,16 @@ public class TemperatureConverter {
     public static float kelvinToCel(float kel){
         return (float) (kel - 273.15);
     }
+
+
+    // add main method that tests conversions and writes what happens
+    public static void main(String[] args) {
+        TemperatureConverter converter = new TemperatureConverter();
+        System.out.println("0 Fahrenheit is " + converter.fahrenheitToCelsius(0) + " Celsius");
+        System.out.println("0 Celsius is " + converter.celsiusToFahrenheit(0) + " Fahrenheit");
+        System.out.println("Is -50 Celsius extreme? " + converter.isExtremeTemperature(-50));
+        System.out.println("Is 20 Celsius extreme? " + converter.isExtremeTemperature(20));
+        System.out.println("Is 60 Celsius extreme? " + converter.isExtremeTemperature(60));
+        System.out.println("0 Kelviniä on celciuksissa " + kelvinToCel(0));
+    }
 }
